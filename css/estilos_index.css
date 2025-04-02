@@ -1,0 +1,39 @@
+#carta {
+    display: flex;
+    justify-content: center;  /* Centra horizontalmente */
+    align-items: center;      /* Centra verticalmente */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;  
+    min-height: 100vh;
+}
+
+/* Estilos de la imagen */
+#carta img {
+    display: block;  /* Elimina cualquier espacio extra alrededor */
+    max-width: 85%;  /* Ajuste para que no desborde */
+    height: auto;    
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Fondo de la página */
+body {
+    background-image: url('../multimedia/img4.jpg'); 
+    background-size: cover;       
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    margin: 0; /* Elimina márgenes que pueden generar desplazamiento */
+    padding: 0;
+}
+
+/* Media Query para mejorar la adaptación en móviles */
+@media (max-width: 480px) {
+    #carta img {
+        max-width: 80%; /* Reduce más el tamaño en pantallas muy pequeñas */
+    }
+}

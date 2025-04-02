@@ -1,0 +1,191 @@
+/* Contenedor de la carta */
+#carta2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw; /* Se adapta al ancho de la pantalla */
+    height: auto; /* Ajuste dinámico de altura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espaciado entre imágenes */
+    flex-wrap: wrap; /* Permite que las imágenes se acomoden en móviles */
+}
+
+/* Imágenes dentro de la carta */
+#carta2 img {
+    max-width: 40%; /* Cada imagen ocupa un máximo del 45% del ancho */
+    height: auto;/* Contenedor de la carta */
+#carta2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw; /* Se adapta al ancho de la pantalla */
+    height: auto; /* Ajuste dinámico de altura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espaciado entre imágenes */
+    flex-wrap: wrap; /* Permite que las imágenes se acomoden en móviles */
+}
+
+/* Imágenes dentro de la carta */
+#carta2 img {
+    max-width: 40%; /* La imagen ocupa todo el ancho sin desbordarse */
+    height: auto;
+    object-fit: contain; /* Evita que se recorte */
+    display: block;
+}
+
+/* Texto sobre la carta */
+.texto-carta {
+    position: absolute;
+    top: 25%; /* Ajusta la posición */
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 60%; /* Se ajusta al tamaño de la imagen */
+    color: black;
+    font-size: 1.2em;
+    text-align: justify;
+    background: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Estilo general para los botones */
+.boton {
+    position: fixed;
+    bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón en la orilla */
+#boton-orilla {
+    right: 20px;
+    background-color: #ff69b4; /* Color rosa */
+}
+
+#boton-orilla:hover {
+    background-color: #ff1493;
+}
+
+/* Botón de regresar */
+#boton-regresar {
+    left: 20px;
+    background-color: #6a5acd; /* Morado */
+}
+
+#boton-regresar:hover {
+    background-color: #483d8b;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    #carta2 {
+        flex-direction: column; /* Se acomodan en columna en móviles */
+        align-items: center;
+    }
+
+    #carta2 img {
+        max-width: 90vw; /* Ocupa casi todo el ancho sin desbordarse */
+    }
+
+    .texto-carta {
+        width: 80%; /* Más adaptable a pantallas pequeñas */
+        font-size: 1em;
+    }
+
+    /* Posicionar ambos botones juntos en la esquina inferior derecha */
+    #boton-orilla, #boton-regresar {
+        bottom: 10px;
+        right: 10px;
+        left: auto; /* Evita que el botón de regresar se quede en la izquierda */
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    #boton-regresar {
+        bottom: 60px; /* Se coloca arriba del otro botón */
+    }
+}
+
+    object-fit: contain; /* Evita que se recorte la imagen */
+}
+
+/* Texto sobre la carta */
+.texto-carta {
+    position: absolute;
+    top: 25%; /* Ajusta la posición para que parezca escrita */
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 60%; /* Se ajusta al tamaño de la imagen */
+    color: black;
+    font-size: 1.2em;
+    text-align: justify;
+    background: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Botón en la orilla */
+#boton-orilla {
+    position: fixed;
+    bottom: 50%;
+    right: 20px;
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#boton-orilla:hover {
+    background-color: #ff1493;
+}
+
+/* Botón de regresar */
+#boton-regresar {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #6a5acd;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#boton-regresar:hover {
+    background-color: #483d8b;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    #carta2 img {
+        max-width: 90%; /* Las imágenes ocupan casi todo el ancho en móviles */
+    }
+
+    .texto-carta {
+        width: 80%; /* Más adaptable a pantallas pequeñas */
+        font-size: 1em;
+    }
+
+    #boton-orilla, #boton-regresar {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
